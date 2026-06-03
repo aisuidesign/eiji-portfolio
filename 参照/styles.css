@@ -32,7 +32,7 @@ body {
   background:
     repeating-linear-gradient(45deg, transparent 0 42px, rgba(240, 90, 40, .07) 42px 46px, transparent 46px 90px),
     repeating-linear-gradient(-45deg, transparent 0 54px, rgba(21, 149, 137, .06) 54px 58px, transparent 58px 112px),
-    url("../素材/BG/02_中間.jpg") top center / 100% auto repeat-y,
+    url("../assets/bg/middle.jpg") top center / 100% auto repeat-y,
     #fffaf0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
   letter-spacing: 0;
@@ -57,14 +57,14 @@ body::before {
   display: block;
   inset: 0 0 auto;
   height: min(55vw, 820px);
-  background: url("../素材/BG/01_上部.jpg") top center / 100% auto no-repeat;
+  background: url("../assets/bg/top.jpg") top center / 100% auto no-repeat;
 }
 
 body::after {
   display: block;
   inset: auto 0 0;
   height: min(58vw, 920px);
-  background: url("../素材/BG/03_下部.jpg") bottom center / 100% auto no-repeat;
+  background: url("../assets/bg/bottom.jpg") bottom center / 100% auto no-repeat;
 }
 
 a { color: inherit; text-decoration: none; }

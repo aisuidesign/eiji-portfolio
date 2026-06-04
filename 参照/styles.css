@@ -85,6 +85,118 @@ img,
   user-select: none;
 }
 
+.site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--deep);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .94), rgba(255, 247, 232, .92)),
+    radial-gradient(circle at 22% 24%, rgba(240, 90, 40, .18) 0 10px, transparent 11px),
+    radial-gradient(circle at 78% 72%, rgba(255, 177, 31, .22) 0 14px, transparent 15px),
+    #fffaf0;
+  transition: opacity .55s ease, visibility .55s ease;
+}
+
+.site-loader.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-pattern {
+  position: absolute;
+  inset: -18%;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 48px, rgba(240, 90, 40, .12) 48px 54px, transparent 54px 104px),
+    repeating-linear-gradient(-45deg, transparent 0 58px, rgba(21, 149, 137, .1) 58px 63px, transparent 63px 120px);
+  animation: loader-drift 1.8s ease-in-out infinite alternate;
+}
+
+.loader-content {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 26px 34px;
+  text-align: center;
+}
+
+.loader-content::before {
+  content: "";
+  width: 54px;
+  height: 54px;
+  border: 8px solid rgba(240, 90, 40, .18);
+  border-top-color: var(--red);
+  border-radius: 50%;
+  animation: loader-spin .9s linear infinite;
+}
+
+.loader-content p {
+  margin: 0;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+  font-size: clamp(30px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.loader-content span {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.loader-progress {
+  display: grid;
+  grid-template-columns: minmax(220px, 34vw) 54px;
+  align-items: center;
+  gap: 12px;
+  width: min(420px, 72vw);
+  margin-top: 2px;
+}
+
+.loader-progress-track {
+  overflow: hidden;
+  height: 14px;
+  border: 2px solid rgba(240, 90, 40, .28);
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .86), rgba(255, 243, 223, .94)),
+    repeating-linear-gradient(45deg, rgba(240, 90, 40, .08) 0 8px, transparent 8px 16px);
+  box-shadow: inset 0 2px 6px rgba(145, 78, 21, .1);
+}
+
+.loader-progress-bar {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--red), #ff8c2a, var(--gold));
+  box-shadow: 0 0 16px rgba(240, 90, 40, .3);
+  transition: width .18s ease-out;
+}
+
+.loader-percent {
+  color: var(--red);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes loader-spin {
+  to { transform: rotate(1turn); }
+}
+
+@keyframes loader-drift {
+  to { transform: translate3d(18px, -14px, 0); }
+}
+
 main,
 .site-header,
 .site-footer {

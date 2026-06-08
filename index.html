@@ -30,7 +30,7 @@
     <nav class="nav" aria-label="メインナビゲーション">
       <a href="#current">制作物</a>
       <a href="#student">いろいろ制作</a>
-      <a href="#portfolio">PDFポートフォリオ</a>
+      <a href="#portfolio-end">PDFポートフォリオ</a>
     </nav>
   </header>
 
@@ -48,7 +48,7 @@
           </figure>
           <div class="hero-actions">
             <a class="primary-button" href="#current">制作実績を見る</a>
-            <a class="ghost-button" href="#portfolio">PDFを見る</a>
+            <a class="ghost-button" href="#portfolio-end">PDFを見る</a>
           </div>
         </div>
         <div class="hero-story">
@@ -538,21 +538,43 @@
           <h2>ポートフォリオ</h2>
         </div>
       </div>
-      <div class="portfolio-link portfolio-preparing" aria-label="PDFポートフォリオは準備中です">
-        <div class="thumb preparing-sign" aria-hidden="true">
-          <span>準備中</span>
-        </div>
-        <div>
-          <h3>PDFポートフォリオ</h3>
-          <p>現在準備中です。</p>
-        </div>
-        <span class="ghost-button">準備中</span>
+      <div class="portfolio-grid">
+        <a class="portfolio-link pdf-card" href="assets/pdfs/portfolio.pdf" target="_blank" rel="noopener">
+          <div class="thumb pdf-thumb">
+            <img loading="lazy" src="assets/images/pdf-portfolio.jpg" alt="Portfolio サムネイル">
+          </div>
+          <div>
+            <h3>Portfolio</h3>
+            <p>作品をまとめたポートフォリオです。</p>
+          </div>
+          <span class="ghost-button">PDFを見る</span>
+        </a>
+        <a class="portfolio-link pdf-card" href="assets/pdfs/ps-practice.pdf" target="_blank" rel="noopener">
+          <div class="thumb pdf-thumb">
+            <img loading="lazy" src="assets/images/pdf-ps-practice.jpg" alt="Ps練習 サムネイル">
+          </div>
+          <div>
+            <h3>Ps練習</h3>
+            <p>Photoshopの練習作品をまとめています。</p>
+          </div>
+          <span class="ghost-button">PDFを見る</span>
+        </a>
+        <a class="portfolio-link pdf-card" href="assets/pdfs/wamochi.pdf" target="_blank" rel="noopener">
+          <div class="thumb pdf-thumb">
+            <img loading="lazy" src="assets/images/pdf-wamochi.jpg" alt="wamochi サムネイル">
+          </div>
+          <div>
+            <h3>wamochi</h3>
+            <p>Illustratorの練習作品をまとめています。</p>
+          </div>
+          <span class="ghost-button">PDFを見る</span>
+        </a>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="portfolio-end">
     <a class="back-to-top" href="#top">TOPへ戻る</a>
     <p>© 2026 伊藤英次</p>
   </footer>

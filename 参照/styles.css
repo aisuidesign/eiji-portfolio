@@ -427,7 +427,7 @@ main::before {
   grid-area: copy;
   display: grid;
   justify-items: start;
-  gap: 10px;
+  gap: 12px;
   text-align: left;
 }
 
@@ -468,6 +468,20 @@ h1 {
   white-space: nowrap;
 }
 
+.hero-lead {
+  margin: 0 0 clamp(18px, 2.2vw, 34px);
+  color: #4b3521;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Times New Roman", serif;
+  font-size: clamp(18px, 1.75vw, 27px);
+  font-weight: 600;
+  line-height: 1.72;
+}
+
+.hero-name-block {
+  display: grid;
+  gap: 8px;
+}
+
 .hero-title {
   margin-bottom: 0;
   color: #8c4a1d;
@@ -496,11 +510,15 @@ h1 {
 }
 
 .hero-story-title {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: var(--red);
   font-size: clamp(24px, 2.2vw, 34px);
   font-weight: 800;
   line-height: 1.15;
+}
+
+.hero-tool-title {
+  margin-top: clamp(16px, 2vw, 28px);
 }
 
 .hero-story-body {
@@ -1027,6 +1045,11 @@ h3 {
   }
   .hero-title {
     font-size: clamp(32px, 8vw, 42px);
+  }
+  .hero-lead {
+    margin-bottom: 18px;
+    font-size: clamp(15px, 4vw, 19px);
+    line-height: 1.75;
   }
   .hero-role { font-size: clamp(20px, 5vw, 26px); }
   .hero-story-title { font-size: 20px; }

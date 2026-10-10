@@ -733,12 +733,55 @@ h3 {
   padding: 10px 0 0;
 }
 
+.has-work-tools .work-body {
+  display: block;
+}
+
+.has-work-tools .work-type,
+.has-work-tools .work-body h3 {
+  grid-column: auto;
+}
+
 .work-body h3 {
   margin-bottom: 0;
   color: var(--deep);
   font-size: clamp(13px, 1.15vw, 15px);
   font-weight: 700;
   line-height: 1.42;
+}
+
+.work-tools {
+  margin-top: 9px;
+}
+
+.work-tools p {
+  margin: 0 0 5px;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.work-tool-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.work-tool-icons img {
+  width: auto;
+  height: clamp(23px, 2.2vw, 30px);
+  max-width: min(170px, 100%);
+  object-fit: contain;
+}
+
+.work-tool-icons img[alt="Substance 3D Painter"],
+.work-tool-icons img[alt="CLIP STUDIO PAINT"],
+.work-tool-icons img[alt="Substance 3D Stager"] {
+  height: clamp(26px, 2.45vw, 33px);
+  max-width: min(210px, 100%);
 }
 
 .work-subsection {
@@ -1054,6 +1097,12 @@ h3 {
   .hero-role { font-size: clamp(20px, 5vw, 26px); }
   .hero-story-title { font-size: 20px; }
   .hero-story-body { font-size: 12px; line-height: 1.72; }
+  .has-work-tools .work-body {
+    display: block;
+  }
+  .has-work-tools .work-tools {
+    margin-top: 10px;
+  }
   .profile-icon { width: 168px; }
   .scroll-cue {
     width: 72px;
